@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://previews.123rf.com/images/christitze/christitze1702/christitze170207981/72478491-celebrities-red-text-on-typography-background-3d-rendered-royalty-free-stock-image-this-image-can-be.jpg'); /* Update with the direct link to your image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            font-size: 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.5);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            padding: 30px;
+            width: 90%; 
+            max-width: 350px; 
+            display: none;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            color: #111212;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #0a0d0e;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .form-container input:focus {
+            border-color: #070b0d;
+            outline: none;
+            box-shadow: 0 0 5px #080d10;
+        }
+
+        .toggle-button {
+            background-color: #040709;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .logout-button {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+        function toggleForms(formId) {
+            const form = document.getElementById(formId);
+            if (form.style.display === 'none' || form.style.display === '') {
+                form.style.display = 'block';
+            } else {
+                form.style.display = 'none';
+            }
+        }
+
+        function clearForm(formId) {
+            const form = document.getElementById(formId);
+            form.reset(); 
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Contact</a>
+        <a href="#" onclick="toggleForms('form1'); clearForm('form1')">Sign Up</a>
+        <a href="#" onclick="toggleForms('form2'); clearForm('form2')">Login</a>
+        <a href="/" class="logout-button">Log Out</a>
+    </div>
+    <div class="form-container" id="form1" style="display: none;">
+        <form id="form1" method="POST" action="/signup">
+            <h2>Sign Up</h2>
+            <input type="email" name="signUpEmail" placeholder=" Enter your Email">
+            <input type="password" name="signUpPassword" placeholder=" Enter Password">
+            <input type="submit" value="Sign Up">
+        </form>
+        <br>
+        <button class="toggle-button" onclick="toggleForms('form1'); clearForm('form1')">Toggle Forms</button>
+    </div>
+    <div class="form-container" id="form2" style="display: none;">
+        <form id="form2" method="POST" action="/login">
+            <h2>Log In</h2>
+            <input type="email" name="loginEmail" placeholder=" Enter your Email">
+            <input type="password" name="loginPassword" placeholder="Enter Password">
+            <input type="submit" value="Log In">
+        </form>
+        <br>
+        <button class="toggle-button" onclick="toggleForms('form2'); clearForm('form2')">Toggle Forms</button>
+    </div>
+</body>
+</html>

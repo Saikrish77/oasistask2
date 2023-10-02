@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tribute Page | Atal Bihari Vajpayee</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./favicon/favicon.ico">
+
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  color: white;
+  background-color: black;
+}
+
+.container {
+  max-width: 90rem;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.description {
+  font-size: 2rem;
+}
+
+.hidden {
+  padding: 2rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.hidden > .title {
+  margin-bottom: 1rem;
+}
+
+.tribute {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  max-width: 78rem;
+  margin: 0 auto;
+  background-color: white;
+  color: black;
+  align-items: center;
+  padding: 0 0 0 1rem;
+}
+
+.tribute blockquote {
+  text-align: center;
+  font-size: 2.1rem;
+}
+
+.quote {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+}
+
+.bio {
+  margin: 2rem auto;
+  padding: 0 0.5rem;
+  max-width: 1000px;
+}
+
+.bio > h2 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.bio > h5 {
+  font-size: 2rem;
+  padding-bottom: 10px;
+}
+
+.bio > p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.bio > hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 1rem auto;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tribute {
+    display: block;
+  }
+
+  .tribute blockquote {
+    font-size: 1.8rem;
+  }
+
+  .quote {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .bio > h2 {
+    font-size: 2.5rem;
+  }
+
+  .bio > h5 {
+    font-size: 1.8rem;
+  }
+
+  .bio > p {
+    font-size: 1.1rem;
+  }
+}
+
+.bio > h2,
+.bio > h5,
+.bio > p {
+  margin-bottom: 1rem; 
+}
+
+</style>
+<body>
+    <header class="hidden">
+        <h1 class="title">Atal Bihari Vajpayee</h1>
+        <p class="description">1924 - 2018</p>
+    </header>    
+    <section class="tribute">
+        <blockquote>
+            "One should firmly believe that all difficulties in life eventually come to an end. - <span class="quote">Atal Bihari Vajpayee"</span>
+        </blockquote>
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxASEBAPEBAPDxAQDw8PEBAPDw8PDw8PFREWFhURFRUYHSggGBolHRUVITEhJSktLi8uFx8zODMtNygtLisBCgoKDQ0NDg0NGi8ZFRkrKysrKys4NCsrKysrKysrKysrKystKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAI8BXwMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAADBAECBQYHAAj/xABAEAACAgECAwUFBgQEBQUBAAABAgADEQQhBRIxBkFRYaETIlJxgRQyQpGx0QfB0vAWI0NiY3KT4fEzgoOioxX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABYRAQEBAAAAAAAAAAAAAAAAAAARAf/aAAwDAQACEQMRAD8A5bMjMGDLLAIDCJBYhFgXEtIE+gXWHVcxdTDVPAZVBDocQKHvl69zA0tO809OwmTQsK2oxA2MZi+q0vlBaPV5MctuGIGOat8TQq4bkZMDTWzvlFZ8deVS36To0rYIOZGXA35lZcfnA4fjehKb905968zsu0dg5TOTogBXTzR0mjz3S9VOZqaKrEAI0QHdGNPosnGJp6ejM0K9OAIGT9iAi704mrcQIjY2TAVKSGWHeBYwBNBMIYiVYQFXEFiMMJQrAFifYhMT7EAJE+xD8kqVgBMqYYrBlYFDK4lyJWBVoIwrSjCBUwLwpMC0Cpg2lmMEWgCEKolAIULA+AhFlQJcCARBJInySWgCzvD0bwQWNaZN4DKLtL0jeEUCEpQZgHr2EFauTNRK1xjEinQmyxUUEljjbw7zAzKgQcLn5Tr+AcKRwHtIY7EJvyDPec7N8pqaXQ1aVeVQptPV2ALH+/CD1Nth/CzKe7P3T4qeo/v5wOipKD3BnKge6MJgeQz0l/bAH8Q/5gd/r/3nL36qwjdTlTzI2Nwe/c9P0IPlAjjF4916+bz3B9O+Br8c7OaTUg86ezfqLa8KfmR0b6j6zzzi/Za3St72HrJ921RsfIj8J8p2lWtfuDb490jb+/PYy2t1bFCjJlGwCpGcCBwVdOI7SoxH+0PA306JcpL0tjLY3Rj3N5ef9nJovgauluAjF+qGJj2W48onbqm8YDuqvycAyazMxLN47VZAM4gGEZMEwgDxBND4lCsABWQVhisgrAXKyhEYKynLAoJDCX5ZJEAJEGwhSJBEABEpiHKypWAu8oYWyCgCeBaHeL2QAuYJjCPAtAKBCiDEuDAuBLASFhAIF6xLMJaoQrAQAAQ1bQDNGKBAYV5aq/Bgs4gSwgblWsHjOr7GgHmYAFi2M94QAH6ZzPPajmeg9kWFVFZ73LMfzP8AIQNzVIDfjuA3+e8bCiY7avmvyOnT0mmrGBdqQYJtOo7h1h1cSLXgLvtMjjF+23UEfrH9ZZtOe4lft+UDotHqF1GlauzwNb9xBHRh4HoZ53qtO1Nz1nflPUdCO4zp+B6sctv4Tscjv6D88kfOZ3aFVsC2D7y+4+PDuP8AfjAx3fMVsG8YKSCkAVdUcprxPqVjKwJUSpEvmVYwBkT7EkypMCjyJYyIEGQVkiWgAIkAQzLICwBFJUrGOWUYQFmgmjDiAaAs4gTGGgGgCeAeHaCYQAWQLCMESjJAqDCKIMCGSBdYRIMCFQQGap9Y0qDIJgAzvNPRVZxEUqyZ0HDaem0BXU6XaJCgCdLqKABuJz+rcBoF66pqniLV6YkK2VJTuwRzAkrjoNxMmtyek6e90CaevCnBU9M5GNxj5dYGjwQF+Xvz7wI3GMbY+mJ0KXIMAsAem+2/1nl/aXXilQiWWV1AllAPveHLjbM5PV3tqWKi293rUsUIyyJsckcuw3G+cbwP0DkEZHpvK1gEnOdvHpPEuz+tdLEC1llygZlDqGJYAKxG2+3fN3tjr7q8p7JvuhsKzlSGPL037yPH0geh8SbPurnbyPfOY4mjAEsCF2wxBAyfMzyqlr2cY9ru3u+4/LzEgAc3KQDv3nuj1PErEt5GsuV1IDIxDc5xjdh9788GB02o1bILUBKi2tkUjusJAB/PB+kW0/G7WFPtFH+aorYA4KW/iY+Ww9YXVJUVUDmdgSzc+wUlfuKB+vy6YiuidHD4Tlaq458fdYg/IYgapk04O8zX1JlatYcwN2sZlmSC0F2Y+VGICUgw1iwRED6QRLCfEQANKZhWEpiBIllkYllWBGJ8BL4nwECpEpiGIgyIC9oiziN2CLOsBWwQLxp1gHWAsRKEQ7JKGuADlkFIcpPuWAniXUS3LLosCUWFRZ9WIdRAE0iuEcSEqgOaOsZzN/RACYNG0bTVFYG7qSCs5LiNfv8A1mnbrcjrMTVajf6wHdOMCdJoaPbV+2wM01OmDnPMUK5Hd/5nH16vbab/AGW4oFFtTZzYwKdcfdOfQesDco0lVqjZc4GGK5w39/zgtN2e1HMQLa+UnJ5c93zY/pGeB2BN+/z7tzGOMcUtYCmk4stPKG+Hbc/QAmB9oeBqbMs4K1MCK1OeawdGf5ZOB558hXtZw1G5bSxrZVZc/hZWxlGHep8t/lF7O0lekKUNTeGrUK1hrLI/i3MPE7/WY3G+3umZ1BV7sbhKlzg9xMCf8L+0CsrvgjIYMGH1z3/3gRjT9mtNUOa1uc+AAZz5DHT67RfhfE70Y6kKUotYZqb71Zxjn+R8Jta7i2V7txA5LixXnBUBRzdB0G8M1OOdgFB1ICgKN/d2axseI+sT4o24PnCVa88n3eXA7wQefp/L1gKazTkRWtN419qJBJiofJga+gfGJqHUYEx9LXHGr2gXa/eGUxJK944ggExIIkCTmBQifBZaWAgCKyQZYiU5YFpOJ8ohMQBmDaFYQbCABoF1jDLKMICpWBdI0ywTCAowlcQ7rKhIASsgiGKyOSAqUlgsMUnwrgUQQkItcsyQE7Gh9LvFdQIfRKYGkElLFjCV7SllZgZmpbAmLqb95p8SOMzAWp7HwvQbsx2VB4k90DZ4cMzS0fEaUuqVfeJcKSPuqT7vX6zneIarkr9nWc52ZsYJ+XgIvo7MqCOvj5+J+sD0qy91OV3XO4+fWSOKLW4tfI/CCdgu+/6CL8C1y2qTsc9fJuh/SbFlaWclXKGGQzbDGBvAQ1vajQPs7q3j/mKgJ8iesxNRxrhiHKLX45azJPyAE6bifD9OjFn0a3B8HNdFbE/M9QfPpEGrpBJq4ZcpPRnFOB8lLQEeGdo6L25K9x90ggld8jZuh6mRrqrwML0HefCbmi0pFTc6BSx5lTcheXfJI7/l4RHievAXB28s5gczfn8R3gnuY7ZlLLi9hPd0HzhQggVDHpCVIYRKxGSgGMQDaSwjujj2Zi+l3M1RSMQEqwYyklgJTEAhMGTIMgwPswqwMupgEkYkiXAgDEvmfESIFWEqRCYkEQAkSnJDYn2ICdiwLCOWLAMkBdllOWM8koywFysqYZllGWBHs5dao17KWFcBda5W0bRo1xfUIcQM91yY9patopXWczW0yHEC/NgRS/UTTu4ZcQMKBzdAxAJHefIfOYeoNPtRRX7TV3s3JyU+7UG7xzYLNjwUQFH07XEgHlUfeY93kPOC4nokFYRTy46YOCT3k+Jna6Tsfq2ReWoUht8M6hgD38pJP5nMT4j2YvoBZ6XIA95/vrjxLDYD5wPM3rAyrZ8pbh/MAUx35yev5ToeIaVT/tPl8pi2hlOc58xuDAZ4Rrm0zk78jfeH852XCO2FIbDld8YJnCWnmGRMrU1MDkQP0B/iTThRvk42xy4I7jvFE7S1HPvDOSPw9J4jwqjV3k16dg1gGVpNgWywf8MNgNjwBz5Sup+11P7O0W0Pv7rq1ZPiRnr8xA9c7Rdq6VQgEHAO/wARInnQ4lfqbBXWMs7cqjzJmfouG6i9wlddlzHuU5x5nuUeZxPWOw/Yn7Ir6jUcraj2ThFU5SnKkE572PTPdv16wPPNBYCispJDAHfruMx5G6ZmVwnTNUDS+zVFqz13KnE0c/WAwpOcw9WqUsAw27yDgwDNt3RcEZ6/lA9ETsypqS6iznDDmHMPT5iZeqLoeVgQZbsR2kFDewvb/Jc/eP8ApP8AF/ynvnea7hddi9AwIyCMEEdxBged1XZMZIjPGOEewYMPuN08j4TO9tAIwgiIdDmSUgAAlhLhZDQLKYQGLiGQwLNB5lmEgLAsol+SQsvAEyyuIYypEADrB8kMZQwKMkXdY2BAuICpEG6xhlgiIGj7OfeyhwsuEgK+zkGiN8ksEgIjSCO6OvBBxk9B+8Itc+1Gtr06G+1gqrkKMe8zdygd56wEO1/FjShryS9gxscFax3D5mP/AMIez/uvxCwDmYtVp9tlUHDuPmcqPk3jPOtfxC3iGsrqrXkN1ldFefeKhmA5m+WST5CfonhuiSiquisYrqrWtB/tUYGfOA0olwJAlhA817f9jSFfU6VfcALWVL1TxZB8Pl3fLp5HYTzHw/vM/U5E8R/iV2QOmta+lT7C08wAG1bHqvygcJbWR7wzv3bwLWgjBEcpc45Tvj59PGUtozuNoCDU75GQQQwI2KkHIIPce+dpwTtwQop4jQNfUOjnl+0KPPOz/M4PiTOTasjr+ollwfWB7j2c47wlwq6ayigscmuwCh8/+7ZtvAmdY1SlcrgjrlSDmfmapO7r/fnDVcQtpKmuyysE8pNdj14z0OxEDrO12kpTW2itlPMQ5x+FiN1PgdvpMdkI/wC8x/tRB/Xv3794e3iOFydiBt4mAxq9UFGP/MXp1WW6/l4Tnr9W1jE79ZtcI0/4mgall2MAfnOi7O9oNRQAK3ymd6396v6Du+k5hfebbpNEuqLk7Dz2MD1mm2rX6ZsDlPRl6muwDIPmPP5zh20TKxUjBUkEeYM1f4TLY66q8giomupPBnXmLEfIMv5zW7Q6QLbzY2cc31Gx/l+cDm0qxJKx0pBukBXEo4h3WCIgDEIplcT5YBRLBZVRCqIEcsnEviSYApVhLET4CAErI5IxyypWAArKlIZhICwFmqgjXHSsqaoDfJJAjH2d/h9R+8j7O/w+q/vJcWaEEhAkIunf4fUS407/AA+oi4TQuSeb9tuIe11TqDmqk+yrHcMffPzLZ/IT1AUN8PqJ5lxLs9qmuuYVZDXWkH2lW4Lkg/ei4TWx/Bbha26+y9t/stPMgx/qWEoG+ih/znuaicB/Cfs6dJp7L7ji7VFCUB5hXUnNyDI2JPMxPzA7p3ouXx9DFJooEsIIXr4+hk/aF8fQxSCxbiGirvrem1QyOCCD+sJ9oXx9DPvbr4+hikeBdruzFmjvNZBZDlqn+NM/qO8TCyo8fCe9dt+HJqdI4XHtav8ANqJB6gbrnzGfriePangF53FfX/dX/VFwmuf1t+B7vl3fSBr1SH7wwfECbGo7Oao/6X/6V/1RG7szrO6k/wDUp/qi4TVqkU4IbOfSV1dI5GyeoON+hin+H+Ir92hv+rp/65L8D4k33qGP/wA2n/ri4TRdBf7SpkLDl5jzqSRh+UDm88jBHTBzMbiFoL8ibqDgTRXs3xBQ2NO3vcv+rR3Z/wB/nC6HspqwC70Hm7h7Wj+qLhNL8O0YA5mx4zTTL7DZB5dfpGKezurbd6iB4Cyr+qOf/wAbUgf+jgDGwerf/wC0XCapp8KP5wOnofV6ivTVdXYLnfA7yT8gCfpD6jhOr9ngU5J/4lX9U2f4acNvp1yvfUVVqrKw3PW3K5wc4DE9FI+sXCa9f4Tw6vT0VaeoYStAo8SepY+ZJJPzmf2nozWr/C3odv1xNn2q46+hgtRyOpVtwRgjBik1whgmE0NboGR2Ue8O47DI7oq+lf4fUfvFwmk3g8Ro6Sz4fVf3lfsdnw+q/vFwmlCJTvjp0Nnw+q/vKDQ2Z+76r+8XCaGkYUT5dHZ8Pqv7xhNK/wAPqP3i4TQuWQVhzpn+H1H7z46d/h9Vi4TSbCfCMnSv8Pqv7yPsj/D6r+8XCaEBIZY0mlf4fUfvJOkfw9RFJpDlkhI99jbw9RLDRt4eoi4TSIrlxVHV0jeHqJYaVvD1EUmv/9k=" alt="Atal Bihari Vajpayee" title="Atal Bihari Vajpayee">
+    </section>
+
+    <section class="bio">
+        <h2>Biography of Atal Bihari Vajpayee</h2>
+        <h5 class="early">Early Life and Education</h5>
+        <p>Atal Bihari Vajpayee was born on December 25, 1924, in Gwalior, Madhya Pradesh, India. He hailed from a middle-class Brahmin family. From a young age, Vajpayee displayed exceptional oratory skills and a keen interest in politics. He completed his schooling from Saraswati Shishu Mandir, Gwalior, and later pursued his higher education at Victoria College (now Laxmi Bai College) in Gwalior and DAV College in Kanpur.</p>
+        
+        <hr>
+        
+        <h5>Involvement in Politics</h5>
+        <p>Vajpayee's political journey began during his college days when he became associated with the Rashtriya Swayamsevak Sangh (RSS), a Hindu nationalist organization. He was deeply influenced by the ideologies of the RSS and its leaders, such as Shyama Prasad Mukherjee and Deendayal Upadhyaya.
+        In 1951, Vajpayee co-founded the Bharatiya Jana Sangh, the political arm of the RSS, and soon emerged as one of its prominent leaders. He was elected as a Member of Parliament to the Lok Sabha for the first time in 1957 from Balrampur in Uttar Pradesh. Vajpayee's eloquence and moderate approach helped him gain respect and popularity, both within his party and among political opponents</p>
+        
+        <hr>
+        
+        <h5>Rise to Prominence</h5>
+        <p>Over the years, Atal Bihari Vajpayee's stature within the Jana Sangh grew steadily. He was known for his ability to forge alliances and maintain strong relationships across party lines. As a result, when the Janata Party was formed in 1977, he played a crucial role in its formation and became the External Affairs Minister in the Morarji Desai-led government.</p>
+        
+        <hr>
+        
+        <h5>Founding the BJP and Prime Ministerial Tenure</h5>
+        <p>In 1980, after the Janata Party's coalition collapsed, Vajpayee re-established the Bharatiya Janata Party (BJP) as its own separate political entity. Under his leadership, the BJP steadily gained prominence and emerged as a major force in Indian politics.
+        In 1996, Atal Bihari Vajpayee was elected as the Prime Minister of India for the first time, but his government lasted only for 13 days. However, he did not give up, and in 1998, the BJP-led National Democratic Alliance (NDA) secured a significant victory in the general elections, and Vajpayee once again became the Prime Minister.
+        During his second term as Prime Minister from 1998 to 1999, Vajpayee's government conducted a series of nuclear tests in Pokhran, establishing India as a nuclear power. His government also focused on economic reforms, infrastructure development, and improving India's international relations.</p>
+        
+        <hr>
+        
+        <h5>The Kargil Conflict and Statesmanship</h5>
+        <p>In 1999, India faced the Kargil conflict with Pakistan. Vajpayee's resolute leadership during this critical time earned him immense respect, both domestically and internationally. He displayed statesmanship by not crossing the Line of Control during the conflict, and once the conflict was resolved, he extended a hand of friendship towards Pakistan, advocating for peace and dialogue.</p>
+        
+        <hr>
+        
+        <h5>The Third Term as Prime Minister</h5>
+        <p>In 1999, the NDA, led by Vajpayee, emerged victorious once again in the general elections. Vajpayee became the Prime Minister for the third time and served a full term from 1999 to 2004. During this tenure, his government continued to focus on economic reforms and infrastructure development. His visionary project, the Golden Quadrilateral, aimed at connecting major cities through a network of highways, was initiated during this time.</p>
+        <hr>
+        
+        <h5>Retirement and Later Life</h5>
+        <p>In 2004, the NDA lost the general elections, and Vajpayee announced his retirement from active politics. However, he remained an influential and respected figure within the BJP and continued to be consulted on important matters</p>
+        <hr>
+        
+        <h5>Legacy and Passing</h5>
+        <p>Atal Bihari Vajpayee was a statesman, poet, and visionary leader who left an indelible mark on Indian politics. His moderation, oratory skills, and dedication to peace and development made him a beloved leader across party lines. On August 16, 2018, Atal Bihari Vajpayee passed away at the age of 93, leaving the nation in mourning. He will always be remembered as one of India's most admired and respected leaders, and his legacy will continue to inspire generations to come.
+        </p>
+    </section>
+
+</body>
+</html>
